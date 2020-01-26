@@ -31,9 +31,11 @@ h2 {
   margin: 5px;
   padding-top: 10px;
   font-size: 28px;
+  color: $black;
 }
 h3 {
   margin: 0;
+  color: $black;
 }
 
 h4 {
@@ -43,9 +45,14 @@ h4 {
 }
 p {
   font-family: $font-secondary;
+  color: $black;
   font-weight: 600;
 }
 
+.subtext {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
 .app-container {
 }
 
@@ -207,4 +214,29 @@ p {
 
 .modal-content {
   padding: 20px 30px;
+}
+
+.bars_container {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  border: 3px $black solid;
+}
+.bar {
+  width: 50%;
+  height: 20px;
+}
+.negative {
+  margin-left: auto;
+  background: linear-gradient(-90deg, #ffd556, red);
+  width: 10%;
+  height: 20px;
+  transition: 0.5s ease-in-out all;
+}
+.positive {
+  background: linear-gradient(90deg, #ffd556, #24b500);
+  width: 10%;
+  height: 20px;
+  transition: 0.5s ease-in-out all;
 }

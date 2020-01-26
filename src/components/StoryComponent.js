@@ -2,6 +2,7 @@ import React from "react";
 import "../scss/defaults.scss";
 import Modal from "react-modal";
 import ModalContent from "./ModalContent.js";
+import MessageComponent from "./MessageComponent.js";
 const customStyles = {
   content: {
     maxWidth: 800,
@@ -13,6 +14,8 @@ const customStyles = {
 };
 function StoryComponent(props) {
   const [modalState, setModalState] = React.useState(false);
+  const [modalMessage, setModalMessage] = React.useState("0");
+
   function openModal() {
     setModalState(true);
   }

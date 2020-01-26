@@ -4,7 +4,7 @@ import ButtonComponent from "./ButtonComponent";
 
 function SelectionContainer(props) {
   const text = {
-    1: "Welcome!",
+    1: "Welcome to Qspace",
     2: "I am the...",
     3: "... of someone who is...",
     4: "and I am from..."
@@ -17,6 +17,12 @@ function SelectionContainer(props) {
   return (
     <div className="centered flex-col">
       <h1>{text[props.step]}</h1>
+      {props.step === 1 ? (
+        <p className="subtext">
+          Provide being supportive for those you love with interactive
+          scenarios!
+        </p>
+      ) : null}
       <div className="button-container">
         {buttons[props.step].map((value, index) => {
           return (

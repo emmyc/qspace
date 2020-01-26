@@ -5,24 +5,11 @@ import Main from "./Main";
 
 function App() {
   const [stepState, setStepState] = React.useState(1);
-  useEffect(() => {
-    let reqbody = {
-      document: {
-        content: "this is a happy sentene"
-      }
-    };
-    let url = `https://language.googleapis.com/v1beta2/documents:analyzeSentiment?key=deaaacb0f4dded33393059f40b0cf3fe0ebdbfb4`;
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify(reqbody)
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        console.log(response);
-      });
-  }, []);
+
+  // useEffect(() => {
+
+  // }, []);
+
   // const renderStart = () => (
   //   <div className="centered wrapper">
   //     <SelectionContainer type="welcome" />
@@ -34,7 +21,7 @@ function App() {
       {stepState <= 3 ? (
         <SelectionContainer
           type="static"
-          text="Welcome!"
+          text="Welcome to Qspace!"
           step={stepState}
           setStep={setStepState}
           className="trans-color"
