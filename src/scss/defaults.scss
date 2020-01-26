@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Open+Sans:400,600,700,800&display=swap");
+
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Nunito", sans-serif;
+$black: #282b42;
+$white: #fefefe;
+$gray: #727483;
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: $font-primary;
+  font-weight: 700;
+  color: $black;
+}
+h3 {
+  margin: 0;
+}
+
+.app-container {
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: 3px $black solid;
+  padding: 5px 20px;
+  border-radius: 8px;
+  margin: 0px 5px;
+  &:hover {
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  background-size: 1800% 1800%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.story-container {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 7px $black solid;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    background: $white;
+  }
+}
+
+.story-img {
+  max-width: 250px;
+}
+
+.story-img-bw {
+  background-color: none;
+}
