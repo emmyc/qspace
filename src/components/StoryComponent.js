@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/defaults.scss";
 import Modal from "react-modal";
+import ModalContent from "./ModalContent.js";
 const customStyles = {
   content: {
     maxWidth: 800,
@@ -37,7 +38,7 @@ function StoryComponent(props) {
         onRequestClose={() => closeModal()}
         contentLabel="Example Modal"
       >
-        <h1>test</h1>
+        <ModalContent className="modal" topic={props.text} />
       </Modal>
     </div>
   );

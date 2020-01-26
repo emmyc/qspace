@@ -4,7 +4,7 @@ $font-primary: "Open Sans", sans-serif;
 $font-secondary: "Nunito", sans-serif;
 $black: #282b42;
 $white: #fefefe;
-$gray: #727483;
+$gray: #21222d;
 
 html,
 body {
@@ -27,8 +27,17 @@ h1 {
   font-weight: 700;
   color: $black;
 }
+h2 {
+  margin: 5px;
+  padding-top: 10px;
+  font-size: 28px;
+}
 h3 {
   margin: 0;
+}
+
+p {
+  font-family: $font-secondary;
 }
 
 .app-container {
@@ -40,6 +49,7 @@ h3 {
 }
 
 .button {
+  transition: 200ms ease-in-out;
   border: 3px $black solid;
   padding: 5px 20px;
   border-radius: 8px;
@@ -48,6 +58,7 @@ h3 {
     background-color: $white;
     color: $black;
     cursor: pointer;
+    transform: scaleX(1.01) scaleY(1.01);
   }
 }
 
@@ -135,6 +146,7 @@ h3 {
   align-items: center;
 }
 .story-container {
+  transition: 200ms ease-in-out;
   width: 300px;
   margin: 10px;
   padding: 10px;
@@ -147,6 +159,7 @@ h3 {
   &:hover {
     cursor: pointer;
     background: $white;
+    transform: scaleX(1.01) scaleY(1.01);
   }
 }
 
@@ -156,4 +169,19 @@ h3 {
 
 .story-img-bw {
   background-color: none;
+}
+
+.text-input {
+  font-family: $font-secondary;
+  font-size: 18px;
+  padding: 15px;
+  word-break: break-word;
+  width: 600px;
+  height: 100px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
