@@ -2,34 +2,49 @@ import React from "react";
 import "../scss/defaults.scss";
 
 function SentimentMessage(props) {
-  function getMessage(value) {
-    console.log(value);
-    if (value > 0.1) {
-      return "Keep it up!";
-    } else if (value < 0) {
-      return "Try using more words of affirmation.";
+  const positive = [
+    "Keep it up!"
+    // "Great!",
+    // "Tell us more!",
+    // "Love to hear it :)"
+  ];
+  const negative = [
+    "Try using more words of affirmation!"
+    // "Try being more positive!",
+    // "Be careful about hurtful language.",
+    // "Try saying that another way!"
+  ];
+  function getMessage() {
+    // const num = Math.floor(Math.random() * 1);
+    if (props.value > 0.1) {
+      return positive[0];
+    } else if (props.value < 0) {
+      return negative[0];
     }
     return "Keep typing to get feedback!";
   }
 
   return (
-    <div>
+    <div className="centered flex-col">
       <div className="bars_container">
-        <div
-          className="bar"
-          //   style={{
-          //     props.value < 0
-          //       ? width:  Math.abs(props.value) * 100 + `%`
-          //       : null
-          //   }}
-        >
-          <div className="negative" />
+        <div className="bar">
+          <div
+            className="negative"
+            style={{
+              width: props.value < 0 ? Math.abs(props.value) * 100 + `%` : 0
+            }}
+          />
         </div>
         <div className="bar">
-          <div className="positive" />
+          <div
+            className="positive"
+            style={{
+              width: props.value > 0 ? Math.abs(props.value) * 100 + `%` : 0
+            }}
+          />
         </div>
       </div>
-      <p>{getMessage(props.value)}</p>
+      <p>{getMessage()}</p>
     </div>
   );
 }

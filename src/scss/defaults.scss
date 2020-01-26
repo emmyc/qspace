@@ -217,6 +217,8 @@ p {
 }
 
 .bars_container {
+  margin-top: 20px;
+
   width: 300px;
   height: 20px;
   border-radius: 10px;
@@ -239,4 +241,15 @@ p {
   width: 10%;
   height: 20px;
   transition: 0.5s ease-in-out all;
+}
+
+.tryagain {
+  border-radius: 10px;
+  border: 3px $black solid;
+  padding: 5px 20px;
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(45deg, #b400ff, #129cff);
+    color: $white;
+  }
 }

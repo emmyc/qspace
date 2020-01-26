@@ -19,7 +19,7 @@ function RenderHealth({ inputValue, setInputValue, score }) {
     </div>
   );
 }
-function RenderSchool({ inputValue, setInputValue }) {
+function RenderSchool({ inputValue, setInputValue, score }) {
   return (
     <div className="centered flex-col modal-content">
       <h1>School question</h1>
@@ -31,6 +31,7 @@ function RenderSchool({ inputValue, setInputValue }) {
       </h4>
       <TextField value={inputValue} setValue={setInputValue} />
       {console.log(inputValue)}
+      <SentimentMessage value={score} />
     </div>
   );
 }
@@ -69,9 +70,13 @@ function RenderFriendship({ inputValue, setInputValue }) {
           })
         : null}
       {choices !== -1 ? (
-        <div>
+        <div className="centered flex-col">
           <p className="choice">{messages[choice]}</p>{" "}
-          {choice > 0 ? <p onClick={() => setChoice(-1)}>Try again.</p> : null}
+          {choice > 0 ? (
+            <p className="tryagain" onClick={() => setChoice(-1)}>
+              Try again.
+            </p>
+          ) : null}
         </div>
       ) : null}
     </div>
@@ -80,7 +85,7 @@ function RenderFriendship({ inputValue, setInputValue }) {
 function ModalContent(props) {
   const [inputValue, setInputValue] = React.useState("");
   const [score, setScore] = React.useState(0);
-  const [debouncedInputValue] = useDebounce(inputValue, 1000);
+  const [debouncedInputValue] = useDebounce(inputValue, 800);
 
   useEffect(() => {
     console.log(debouncedInputValue);
