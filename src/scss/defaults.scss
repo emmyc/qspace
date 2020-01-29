@@ -211,6 +211,15 @@ p {
     color: $white;
   }
 }
+.error {
+  border-radius: 14px;
+  border: 3px $black solid;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px;
+  background: linear-gradient(45deg, #b400ff, #129cff);
+  color: $white;
+}
 
 .modal-content {
   padding: 20px 30px;

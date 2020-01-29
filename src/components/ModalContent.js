@@ -8,11 +8,11 @@ import SentimentMessage from "./SentimentMessage.js";
 function RenderHealth({ inputValue, setInputValue, score }) {
   return (
     <div className="centered flex-col modal-content">
-      <h1>Health question</h1>
+      <h1>Health Situation</h1>
       <h4>
-        Your child recently transitioned and your father keeps calling him by
-        the wrong pronouns. Further, your father keeps referring to him by his
-        birth name. How do you respond?
+        Your daughter recently came out as bisexual. As a responsible parent,
+        you want to talk to her about emotions and safe sex. What do you tell
+        her?
       </h4>
       <TextField value={inputValue} setValue={setInputValue} />
       <SentimentMessage value={score} />
@@ -22,7 +22,7 @@ function RenderHealth({ inputValue, setInputValue, score }) {
 function RenderSchool({ inputValue, setInputValue, score }) {
   return (
     <div className="centered flex-col modal-content">
-      <h1>School question</h1>
+      <h1>School Situation</h1>
       <h4>
         A classmate in your child’s school recently came out as gay. Your child
         and their friends have been using the words “sissy” and “girly” to
@@ -53,7 +53,7 @@ function RenderFriendship({ inputValue, setInputValue }) {
   ];
   return (
     <div className="centered flex-col modal-content">
-      <h1>Friendship question</h1>
+      <h1>Friendship Situation</h1>
       <h4>
         Your child recently came out as queer to you. They want to come out to
         their friends of the same gender, but they are scared that their friend
@@ -71,7 +71,7 @@ function RenderFriendship({ inputValue, setInputValue }) {
         : null}
       {choices !== -1 ? (
         <div className="centered flex-col">
-          <p className="choice">{messages[choice]}</p>{" "}
+          <p className="choice error">{messages[choice]}</p>{" "}
           {choice > 0 ? (
             <p className="tryagain" onClick={() => setChoice(-1)}>
               Try again.

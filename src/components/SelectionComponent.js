@@ -19,7 +19,7 @@ function SelectionContainer(props) {
       <h1>{text[props.step]}</h1>
       {props.step === 1 ? (
         <p className="subtext">
-          Provide being supportive for those you love with interactive
+          Provide being supportive for those you love through interactive
           scenarios!
         </p>
       ) : null}
